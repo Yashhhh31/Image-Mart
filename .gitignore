@@ -23,6 +23,15 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p8
+*.crt
+*.cer
+.vscode/
+.idea/
+.eslintcache
+.turbo/
+.cache/
 
 # debug
 npm-debug.log*
@@ -39,3 +48,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# logs
+*.log
+
+# OS
+Thumbs.db
