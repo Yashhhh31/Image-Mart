@@ -75,21 +75,17 @@ IMAGEKIT_PRIVATE_KEY="your_private_key"
 NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT="https://ik.imagekit.io/your_id"
 ```
 
-### 4. Seed the Database
+### 4. Seed the Database (optional)
 
-**Option A — Create admin user only:**
+Create an admin user (no sample/demo images are seeded — the marketplace
+starts empty and only shows images that real users add via **Sell Your
+Images** or the admin **Add New Image** page):
 ```bash
 node scripts/seed-admin.mjs
 ```
 
-**Option B — Create admin + sample images with prices:**
-```bash
-node scripts/seed-sample-images.mjs
-```
-
 This creates:
 - Admin user: `admin@imagemart.com` / `admin123`
-- 8 sample images with prices ranging from $6.99 — $19.99
 
 ### 5. Run the Development Server
 
@@ -137,8 +133,7 @@ imagemart/
 │   ├── Product.ts          # Product schema
 │   └── User.ts             # User schema
 ├── scripts/
-│   ├── seed-admin.mjs      # Admin user seeder
-│   └── seed-sample-images.mjs  # Sample images seeder
+│   └── seed-admin.mjs      # Admin user seeder
 ├── middlewares.ts          # NextAuth middleware
 ├── next.config.js          # Next.js config
 ├── types.d.ts              # Global type declarations
